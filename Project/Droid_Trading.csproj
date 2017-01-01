@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EC05217-1068-46CB-9396-491FA84195B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Droid_trading</RootNamespace>
+    <AssemblyName>Droid_trading</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>lib\4.0\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.OCR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.3.3.0\lib\net45\Aspose.OCR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+	<Reference Include="Tools4Libraries, Version=1.0.5976.11865, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tools4Libraries.1.0.4\lib\4.0\Tools4Libraries.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controler\Interface_trd.cs" />
+    <Compile Include="Controler\Logger.cs" />
+    <Compile Include="Controler\ScanMarket.cs" />
+    <Compile Include="Controler\TopOptionFirefox.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Controler\Calculation.cs" />
+    <Compile Include="Model\enum.cs" />
+    <Compile Include="Model\ExclusionZone.cs" />
+    <Compile Include="Model\Market.cs" />
+    <Compile Include="Model\Trade.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Service\ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\TS_Trading.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\TS_Trading.Designer.cs">
+      <DependentUpon>TS_Trading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccountPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AccountPreview.Designer.cs">
+      <DependentUpon>AccountPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DemoFirefox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DemoFirefox.Designer.cs">
+      <DependentUpon>DemoFirefox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarketPreView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TradeMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TradeMonitor.Designer.cs">
+      <DependentUpon>TradeMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TradeReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TradeReport.Designer.cs">
+      <DependentUpon>TradeReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Service\TS_Trading.resx">
+      <DependentUpon>TS_Trading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DemoFirefox.resx">
+      <DependentUpon>DemoFirefox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MarketPreView.resx">
+      <DependentUpon>MarketPreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TradeMonitor.resx">
+      <DependentUpon>TradeMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TradeReport.resx">
+      <DependentUpon>TradeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Droid_communication\Droid_Communication.csproj">
+      <Project>{d55d2a2b-4cb6-446a-a493-804075253e22}</Project>
+      <Name>Droid_Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Droid_database\Droid_Database.csproj">
+      <Project>{f2c407c1-4b00-4a4a-9647-0bd314817c2f}</Project>
+      <Name>Droid_Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools4Libraries\Tools4Libraries.csproj">
+      <Project>{d2c821f1-1ce1-4b0b-b87a-d59b0ae062a0}</Project>
+      <Name>Tools4Libraries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

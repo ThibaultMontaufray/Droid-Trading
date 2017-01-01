@@ -1,0 +1,5 @@
+﻿language: csharp
+solution: Droid_Trading.sln
+mono: latest
+notifications : 
+	email:false
